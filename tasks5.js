@@ -6,15 +6,14 @@ search([1, 5, 3], 5) ➞ 1
 search([1, 2, 3], 4) ➞ -1
 ``` */
 
-function search(arr,son){
-    for(let index in arr){
-        if(son===arr[index])
-            console.log(`Indcex: ${index}, qiymat: ${arr[index]}`);
+function search(arr, son) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === son) {
+            return i; 
+        }
     }
-    console.log(`Indcex: ${-1}, qiymat: ${son}`);
-
+    return -1; 
 }
 
-
-// search([1, 2, 3], 4)
-search([1, 5, 3], 5)
+console.log(search([1, 5, 3], 5)); 
+console.log(search([1, 2, 3], 4)); 
